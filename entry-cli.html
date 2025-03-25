@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entry Page Oneform</title>
+<link rel="stylesheet" href="reset.css" />
+<link rel="stylesheet" href="style-anuar.css" />
+<style>
+   body {
+    background-color: #89CFF0;
+   }
+  </style>
+<!-- <link rel="stylesheet" href="/style-sivers.css">
+<link rel="stylesheet" href="font/arialn.ttf"> -->
+</head>
+<body>
+<header class="container">
+<nav id="navbar" class="header-nav">
+<ul>
+<li><a href="#02">ДО приезда</a></li>
+<li><a href="#03">В ФРГ</a></li>
+<li><a href="#04">Здоровье+страховка</a></li>
+<li><a href="#05">Работодатель</a></li>
+<li><a href="./entry-spouse.html">Spouse</a></li>
+<li><a href="./entry-kids.html">Kids</a></li>
+</ul>
+</nav>
+<h1>CLI - Applicant’s data - Данные заявителя</h1>
+
+</header>
+
+<h2 id="01">Общие Данные - Basic Data</h2>
+
+<p>If your family accompany you, for each family member an extra applicaton needed:</p>
+
+<p><small>
+<ul>
+<li>The information on this page is also required if the persons concerned are remaining abroad.<br>
+Необходимо заполнить и в том случае, если это лицо остается за пределами Германии.</li>
+<br>
+<li>If you are divorced, you can leave the fields about your former spouse blank.</li>
+Если вы в разводе, можно оставить поля без заполнения.<br>
+<br>
+<li>If you opted for civil union (s. above) please fill the fields. </li>
+Если вы ранее указали, что живете в гражданском браке, поля ниже обязательны к заполнению.
+</ul>
+</small></p>
+
+<h3>Данные о себе</h3>
+
+<p>Vorname - First name - Имя {<span class="field">cli_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>Familienname - Surname - Фамилия {<span class="field">cli_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Früherer Familienname - Former surname - Прежняя фамилия {<span class="field">cli_name_prev</span>}<br>
+<input type="text"><br>
+<small>
+Former surname #2 - Прежняя фамилия №2 {<span class="field">cli_name_prev#2</span>}<br>
+<input type="text"><br>
+(please state ALL former surnames - пожалуйста укажите ВСЕ прежние фамилии. Если прежняя фамилия всего одна или не одной - оставьте эти поля пустыми)
+</small>
+</p>
+
+<p>Geburtsdatum - Date of birth (DD.MM.YYYY) - Дата рождения {<span class="field">cli_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">cli_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Geburtland - Country of birth - Страна рождения {<span class="field">cli_birth_land</span>}<br>
+<input type="text">
+</p>
+
+<p>Derzeitige Staatsangehörigkeit - Current Citizenship - <u>Нынешнее</u> Гражданство {<span class="field">cli_citz_now</span>}
+<br>
+<input type="text"><br>
+<small>
+Current Citizenship #2- Гражданство №2 {<span class="field">cli_citz_now#2</span>}<br>
+<input type="text"><br>
+Citizenship #3- Гражданство №3 {<span class="field">cli_citz_now#3</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте дополнительные поля пустыми)</small>
+</p>
+
+<p>Frühere Staatsangehörigkeit - Former citzenship - <u>Прежнее</u> гражданство {<span class="field">cli_citz_prev</span>}<br>
+<input type="text"><br>
+Citizenship #2 - Гражданство №2 {<span class="field">cli_citz_prev#2</span>}<br>
+<input type="text"><br>
+Citizenship #3 - Гражданство №3 {<span class="field">cli_citz_prev#3</span>}<br>
+<input type="text"><br>
+<small>(please state all nationalities. If there is no previous citizenship(s), leave the corresponding field(s) blank)
+<br> (пожалуйста укажите ВСЕ гражданства в порядке их получения, аналогично графе выше)</small>
+</p>
+
+<p>Geschlecht - Sex - Пол</p>
+<p>
+<input type="radio" name="sex" value="cli_sex_m"> männlich - male - мужской {<span class="field">cli_sex_m</span>}
+<br>
+<input type="radio" name="sex" value="cli_sex_f"> weiblich - female - женский {<span class="field">cli_sex_f</span>}
+</p>
+
+<hr>
+
+<p>Familienstand - Marital status - Семейное положение</p>
+
+<p>
+<input type="radio" name="marital" value="cli_marital_solo">
+single - в браке не состою {<span class="field">cli_marital_solo</span>}
+<br>
+<input type="radio" name="marital" value="cli_marital_married">
+married since - состою в браке с <input type="text" placeholder="DD.MM.YYYY"> {<span class="field">cli_marital_married</span>}
+<br>
+<input type="radio" name="marital" value="cli_marital_civil">
+civil union since - в гражданском браке с <input type="text"> {<span class="field">cli_marital_civil</span>}
+<br>
+<input type="radio" name="marital" value="cli_marital_divorced">
+divorced since - в разводе с <input type="text"> {<span class="field">cli_marital_divorced</span>}
+<br>
+<input type="radio" name="marital" value="cli_marital_widowed">
+widowed since - овдовевший (-ая) с <input type="text"> {<span class="field">cli_marital_widowed</span>}
+</p>
+
+<hr>
+
+<p>Art des Reisedokuments - Type of travel document - Тип проездного документа</p>
+
+<p>Passport - Заграничный паспорт</p>
+<!--
+<p>
+<input type="radio" name="traveldoc" value="cli_doc"> Passport - Заграничный паспорт {<span class="field">cli_doc_pass</span>}<br>
+<input type="radio" name="traveldoc" value="<b>cli_doc_other</b>:"> Other travel document - Другой вид проездного документа {<span class="field">cli_doc_other</span>}<br>
+<small>(If not passport, please specify)<br><input type="text"><br>
+(Если НЕ заграничный паспорт, просьба указать тип проездного документа (точное обозначение)</small>
+</p>
+-->
+
+<p>Number of passport - Номер загранпаспорта {<span class="field">cli_pass_number</span>}<br>
+<input type="text">
+</p>
+
+<p>Date of Issue - Дата выдачи {<span class="field">cli_pass_issued_on</span>}<br>
+<input type="text">
+</p>
+
+<p>Valid until - Действителен до {<span class="field">cli_pass_valid_till</span>}<br>
+<input type="text">
+</p>
+
+<p>Issued by - Выдан (кем) {<span class="field">cli_pass_issued_by</span>}<br>
+<input type="text">
+</p>
+
+<p>Aufenthaltstitel oder gleichwertiges - Residence permit no. -  Dokument Nr. Разрешение на пребывание или равнозначный документ, No.</p>
+<p><small>(If you have a valid visa or residence permit of EC-country, please specify below:)<br>
+(Если у вас есть действующее разрешение на въезд/пребывание в странах ЕС, просьба указать точное обозначение ниже:
+</small></p>
+<p>
+<input type="radio" name="cli_doc_travel" value="visa_schen">
+Шенгенская виза {<span class="field">cli_visa_schen</span>}
+<br>
+Visa Nr. - Номер шенгенской визы <input type="text"> {<span class="field">cli_visa_schen_number</span>}<br>
+Gültig bis zum - Valid until - Действительна до <input type="text"> {<span class="field">cli_visa_schen_valid_till</span>}<br>
+<input type="radio" name="cli_doc_travel" value="visa"> Национальная виза {<span class="field">cli_visa</span>}<br>
+National Visa Nr. - Номер национальной визы <input type="text"> {<span class="field">cli_visa_number</span>}<br>
+Gültig bis zum - Valid until - Действительна до <input type="text"> {<span class="field">cli_visa_schen_valid_till</span>}<br>
+<input type="radio" name="cli_doc_travel" value="permit"> Вид На Жительство {<span class="field">cli_permit</span>}
+Residence Permit Nr. - Номер ВНЖ <input type="text"> {<span class="field">cli_permit_number</span>}<br>
+Gültig bis zum - Valid until - Действителен до <input type="text"> {<span class="field">cli_visa_schen_valid_till</span>}<br>
+</p>
+
+<p>Please specify the country - укажите страну<br>
+<input type="radio" name="land" value="cli_doc_travel_DE"> Germany - Германия {<span class="field">cli_doc_travel_DE</span>}<br>
+<input type="radio" name="land" value="cli_doc_travel_other"> Other EC-county,
+which is - Другая страна ЕС, а именно <input type="text">{<span class="field">cli_doc_travel_other</span>}<br>
+</p>
+<hr>
+
+<h4>Aktuelle Anschrift... - Current address and contact details - Действующий адрес и контактные данные</h4>
+
+<p><small>Указывайте ваш адрес вашей регистрации. Адресные данные заполняются латинскими буквами.<br>
+(Подсказка: введите ваш адрес в гугл и измените настройки на "английский язык")</small>
+</p>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_addr_native_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_addr_native_house</span>}<br></p>
+<p>
+Номер здания/корпуса (optional) <input type="text"> {<span class="field">cli_addr_native_building</span>}<br>
+Номер квартиры <input type="text"> {<span class="field">cli_addr_native_flat</span>}<br>
+<small>(Если вы прописаны в частном доме, это поле необязательно к заполнению)</small>
+</p>
+
+<p>Postcode - Почтовый Индекс
+<input type="text"> {<span class="field">cli_addr_native_zip</span>}
+<br>
+<small>(Hint: если индекс неизвестен, введите ваш адрес в гугл и сразу его узнаете)</small>
+</p>
+
+<p>Place - Населенный пункт
+<input type="text"> {<span class="field">cli_addr_native_place</span>}
+</p>
+
+<p>Country - Cтрана
+<input type="text"> {<span class="field">cli_addr_native_land</span>}
+</p>
+
+<p>Email address - Адрес электронной почты {<span class="field">cli_email</span>}
+<input type="text">
+</p>
+
+<p>Phone number - Телефонный номер (optional) {<span class="field">cli_phone_native</span>}
+<input type="text"><br>
+</p>
+
+<p>Mobile phone number - Номер мобильного телефона {<span class="field">cli_mob_native</span>}
+<input type="text"><br>
+<small>(Entry format: + country code - mob. number. Ex.: Ukraine +380.... India +91...)</small>
+
+<p><button type="submit" class="form-button">SAVE entered data</button>
+Save your entries to avoid data lost (recommended)</p>
+<br>
+<a href="#navbar">Go to NAVBAR</a>
+<hr>
+
+<h4><a href="./entry-spouse.html">
+  Angaben zur Ehegattin... - Information on the applicant’s spouse/registered partner
+- Данные о cупруге/гражданском партнере</a></h4>
+
+<hr>
+
+<h3 id="03">Angaben zu Kindern ... - Information on the applicant’s children - Данные о детях заявителя</h3>
+<p>
+<mark>Ребенок/дети направляющиеся в Германию</mark> -> <a href="./entry-kids.html">
+  ДАННЫЕ ДЛЯ ЗАПОЛНЕНИЯ ЗДЕСЬ</a>.
+</p>
+<p>
+(please also mention children aged over 18 years)<br>
+(в том числе о детях старше 18 лет)
+</p>
+
+<p>ВНИМАНИЕ! <br>
+Ниже <mark>заполняются данные о детях от <strong>прежнего брака,
+остающихся на родине</mark>.</strong></p>
+
+<h4>Child #1 - Первый ребенок</h4>
+
+<p>Ребенок который родился самым <mark>первым</mark>.</p>
+
+<p>Familienname - Surname - Фамилия {<span class="field">kid_cli_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">kid_cli_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>Geschlecht - Sex - Пол</p>
+<p>
+<input type="radio" name="sex" value="kid_cli_sex_m"> männlich - male - мужской {<span class="field">kid_cli_sex_m</span>}<br>
+<input type="radio" name="sex" value="kid_cli_sex_f"> weiblich - female - женский {<span class="field">kid_cli_sex_f</span>}
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">kid_cli_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">kid_cli_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">kid_cli_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Citizenship #2- Гражданство №2 {<span class="field">kid_cli_citz_now#2</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте второе поле пустым)</small>
+</p>
+
+<p>Place of residence - Место жительства <br>
+Place - Населенный пункт: <input type="text"> {<span class="field">kid_cli_addr_place</span>}
+<br>
+Country - Страна : <input type="text"> {<span class="field">kid_cli_addr_land</span>}
+</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<h4>Child #2 - Второй ребенок</h4>
+
+<p>Familienname - Surname - Фамилия {<span class="field">kid_cli#2_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">kid_cli#2_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>
+<input type="radio" name="sex" value="kid_cli#2_sex_m"> männlich - male - мужской {<span class="field">kid_cli#2_sex_m</span>}<br>
+<input type="radio" name="sex" value="kid_cli#2_sex_f"> weiblich - female - женский {<span class="field">kid_cli#2_sex_f</span>}
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">kid_cli#2_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">kid_cli#2_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">kid_cli#2_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Citizenship #2- Гражданство №2 {<span class="field">kid_cli#2_citz_now#2</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте второе поле пустым)</small>
+</p>
+
+<p>Place of residence - Место жительства <br>
+Place - Населенный пункт: <input type="text"> {<span class="field">kid_cli#2_addr_place</span>}
+<br>
+Country - Страна : <input type="text"> {<span class="field">kid_cli#2_addr_land</span>}
+</p>
+
+<p><button type="submit" class="form-button">SAVE entered data</button>
+Save your entries to avoid data lost (recommended)</p>
+
+<hr>
+
+<h3 id="04">4. Angaben zu den Eltern... - Information on the applicant’s parents - Данные о родителях заявителя </h3>
+
+<p><small>
+The information on this page is also required if the persons concerned are remaining abroad.<br>
+Необходимо заполнить и в том случае, если это лицо остается за пределами Германии.
+</small></p>
+
+<p><small>
+If parents have passports or other documents with their first and last names written in the Latin alphabet, strictly copy that spelling.<br>
+Если у родителей есть загранпаспорта или другие документы с написанием их имен и фамилий латиницей, строго скопируйте данное написание.
+</small></p>
+
+
+<h4>Father - Отец</h4>
+
+<p>Familienname - Surname - Фамилия {<span class="field">cli_dad_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">cli_dad_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">cli_dad_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">cli_dad_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">cli_dad_citz_now</span>}<br>
+<input type="text"></p>
+
+<p>
+<input type="radio" name="life" value="passed"> Passed away - скончался {<span class="field">cli_dad_life_passed</span>}<br>
+OR: / ИЛИ:<br>
+Place of residence - Проживает в: <br>
+Place - Населенный пункт: <input type="text"> {<span class="field">cli_dad_addr_place</span>}<br>
+Country - Страна : <input type="text"> {<span class="field">cli_dad_addr_land</span>}
+</p>
+
+<h4>Mother - Мать</h4>
+
+<p>Familienname - Surname - Фамилия {<span class="field">cli_mom_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">cli_mom_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">cli_mom_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">cli_mom_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">cli_mom_citz_now</span>}<br>
+<input type="text"></p>
+
+<p>
+<input type="radio" name="life" value="passed"> Passed away - скончалась {<span class="field">cli_mom_life_passed</span>}<br>
+OR: / ИЛИ:<br>
+Place of residence - Проживает в: <br>
+Place of residence - Место жительства <br>
+Place - Населенный пункт: <input type="text"> {<span class="field">cli_mom_addr_place</span>}<br>
+Country - Страна : <input type="text"> {<span class="field">cli_mom_addr_land</span>}
+</p>
+
+<hr>
+
+<h3 id="05">5. Have you ever been to Germany before? - Вы бывали раннее в Федеративной Республике Германия?
+</h3>
+<p>
+<input type="radio" name="DE-visited" value="yes"> ja - yes - да {<span class="field">cli_DE_visited_yes</span>}<br>
+<input type="radio" name="DE-visited" value="not"> nein - no - нет {<span class="field">cli_DE_visited_not</span>}
+</p>
+
+<p>If so, enter dates and places of your last five stays (month/year):</p>
+
+<h4>1. visit</h4>
+
+<p>from {<span class="field">cli_de_visit_from</span>} <input type="text"><br>
+to {<span class="field">cli_de_visit_to</span>} <input type="text"><br>
+in {<span class="field">cli_de_visit_in</span>} <input type="text"></p>
+
+<h4>2. visit</h4>
+
+<p>from {<span class="field">cli_de_visit_from#2</span>} <input type="text"><br>
+to {<span class="field">cli_de_visit_to#2</span>} <input type="text"><br>
+in {<span class="field">cli_de_visit_in#2</span>} <input type="text"></p>
+
+<h4>3. visit</h4>
+<p>from {<span class="field">cli_de_visit_from#3</span>} <input type="text"><br>
+to {<span class="field">cli_de_visit_to#3</span>} <input type="text"><br>
+in {<span class="field">cli_de_visit_in#3</span>} <input type="text"></p>
+
+<!-- Question from AE-Form
+
+
+<h3 id="03">After arrival in Germany - После прибытия в ФРГ</h3>
+
+<h4>CLI - ЗАЯВИТЕЛЬ в ФРГ</h4>
+<p>
+Eingereist am (DD.MM.YYYY) - Date of entry {<span class="field">cli_entry_date</span>}<br>
+<input type="text">
+</p><p>
+Aus - from {<span class="field">cli_entry_land</span>}<br>
+<input type="text">
+</p><p>
+Angemeldet am (DD.MM.YYYY) - Registered on {<span class="field">cli_reg_date</span>}<br>
+<input type="text">
+</p>
+<p>
+Krankenversicherungsnummer - Health Insurance No - № медицинского страхования {<span class="field">cli_insurance<mark>_number</mark></span>}<br>
+<input type="text"> 
+</p>
+<p>
+Rentenversicherungsnummer - Pension Insurance No - № пенсионного (социальное) страхование {<span class="field">cli_insurance<mark>_sva_number</mark></span>}<br>
+<input type="text"> 
+</p>
+
+<p>
+Steuer-ID (IdNr.) - TIN - налоговый идентификационный номер {<span class="field">cli<mark>_idnrv</mark></span>}<br>
+<input type="text"> 
+</p>
+
+
+Question from AE-Form END
+
+EMPLOYEE
+
+Профессия согласно диплому
+
+Должность согласно контракту
+
+Зарплата (брутто)
+
+в месяц
+в год
+
+Граница зарплаты: МЕНЬШЕ 5.362,50 / ВЫШЕ
+
+EMPLOYER
+
+Amtsgericht
+
+Ha
+
+
+
+
+
+-->
+
+<p><button type="submit" class="form-button">SAVE entered data</button>
+Save your entries to avoid data lost (recommended)</p>
+<hr>
+<hr>
+
+<h3 id="06">6. Vorgesehener Aufenthaltsort... - Intended place of stay in Germany - Предполагаемое место пребывания в Федеративной Республике Германия</h3>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_addr_intended_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_addr_intended_house</span>}<br></p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_addr_intended_zip</span>}
+<input type="text">
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_addr_intended_place</span>}
+<input type="text">
+</p>
+
+<p><strong>How will you be accommodated?</strong>
+<br>
+<input type="radio" name="accomodation" value="singleroom"> Single room {<span class="field">cli_de_singleroom</span>}<br>
+<input type="radio" name="accomodation" value="rooms"> Apartment with
+<input type="text"> rooms {<span class="field">cli_de_rooms</span>}
+<br>
+<input type="radio" name="accomodation" value="other">  Other (please specify):
+<input type="text"> {<span class="field">cli_de_other</span>}
+</p>
+<hr>
+
+<h3 id="03">Already registered in Germany - Уже проживаете в ФРГ (есть прописка)</h3>
+
+<p>
+Eingereist am (DD.MM.YYYY) - Date of entry {<span class="field">cli_entry_date</span>}<br>
+<input type="text">
+</p><p>
+Aus - from {<span class="field">cli_entry_land</span>}<br>
+<input type="text">
+</p><p>
+Angemeldet am (DD.MM.YYYY) - Registered on {<span class="field">cli_reg_date</span>}<br>
+<input type="text">
+</p><p>
+
+</p><p>
+Current address (registration address) in Germany - Адрес вашей регистрации в ФРГ:
+<input type="radio" name="address" value="intended"> same as in section 6 - тот же, что и секции 6.<br>
+<input type="radio" name="address" value="reg"> Other Address:
+</p>
+<p> Street - Улица <input type="text"> {<span class="field">cli_addr_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_addr_house</span>}<br></p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_addr_zip</span>}
+<input type="text">
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_addr_place</span>}
+<input type="text">
+</p>
+<hr>
+<h3 id="07">7. Wird ständiger Wohnort... - Do you intend to maintain your permanent residence outside Germany? - Сохраняется ли постоянное место жительства за пределами Федеративной Республики Германия?
+</h3>
+<p>Recommendation: opt for "yes", because it will be easier for you to get back your tax if you send money to the relatives in your native country.
+</p>
+<p><small> You can always change your decision while staying in Germany</small></p>
+<p>
+<input type="radio" name="addr_native" value="yes"> Yes, it will be the current address of my registration {<span class="field">cli_addr_native_yes</span>}<br>
+<input type="radio" name="addr_native" value="not"> No {<span class="field">cli_addr_native_not</span>}
+</p>
+
+<hr>
+
+<h3 id="08">8. Sollen ... - Do family members intend to accompany you? - Въезжают ли с Вами члены семьи?
+</h3>
+
+<p>"Family" is to be understood as a spouse and minor child(ren) </p>
+
+<p>
+<input type="radio" name="reunion" value="cli_reunion_yes"> Yes. {<span class="field">cli_reunion_yes</span>}<br>
+<input type="radio" name="reunion" value="cli_reunion_not"> No. {<span class="field">cli_reunion_not</span>}
+</p>
+
+<p> If yes, who - Если да, кто именно: </p>
+
+<p><small>Multiple choice possible / Выберите всех кто едет с вами</small></p>
+
+<input type="radio" name="reunion" value="cli_reunion_spouse"> Spouse - Супруг(а) {<span class="field">cli_reunion_spouse</span>}<br>
+<input type="radio" name="reunion" value="cli_reunion_kid"> Oldest child - Первый ребенок {<span class="field">cli_reunion_kid</span>}<br>
+<input type="radio" name="reunion" value="cli_reunion_kid#2"> Second child - Второй ребенок {<span class="field">cli_reunion_kid#2</span>}<br>
+<input type="radio" name="reunion" value="cli_reunion_kid#3"> Third child - Третий ребенок {<span class="field">cli_reunion_kid#3</span>}<br>
+
+<p><button type="submit" class="form-button">SAVE entered data</button>
+Save your entries to avoid data lost (recommended)</p>
+<hr>
+
+<h3 id="09">9. Zweck des Aufenthalts... - Purpose of stay in the Federal Republic of Germany - Цель пребывания в Федеративной Республике Германия</h3>
+
+<p>
+<input type="radio" name="purpose" value="cli_purpose_work"> Employment - Трудовая деятельность {<span class="field">cli_purpose_work</span>}<br>
+<input type="radio" name="purpose" value="cli_purpose_study"> Study - Учеба в университете {<span class="field">cli_purpose_study</span>}<br>
+<input type="radio" name="purpose" value="cli_purpose_aupair"> Au pair - Au pair {<span class="field">cli_purpose_aupair</span>}<br>
+<input type="radio" name="purpose" value="cli_purpose_lang"> Language course - Языковой курс {<span class="field">cli_purpose_lang</span>}<br>
+<input type="radio" name="purpose" value="cli_purpose_reunion"> Family reunion - Воссоединение семьи {<span class="field">cli_purpose_reunion</span>}<br>
+<input type="radio" name="purpose" value="cli_purpose_other"> Other - Другое  {<span class="field">cli_purpose_other</span>}
+</p>
+
+<p>If other please specify - Если другое, то просьба указать:<br><input type="text">
+</p>
+
+<p>If applicable, intended employment: - (В соответствующих случаях) предполагаемая трудовая деятельность:
+<br><input type="text">
+</p>
+
+<input type="radio" name="purpose" value="<b>cli_doc_other</b>:">
+I intend to stay no longer than twelve months in the Federal territory and apply for a visa that covers the whole duration of my stay.
+- Я не намерен (-а) оставаться на территории Германии дольше двенадцати месяцев и подаю заявление о получении визы со сроком действия
+на все время пребывания {<span class="field">cli_doc_other</span>}
+</p>
+
+<hr>
+
+<h3 id="10">10. Referenzen... - References in the Federal Republic of Germany - Референции в Федеративной Республике Германия</h3>
+
+<p><input type="radio" name="ref" value="cli_ref_emp"> Employer - работодатель {<span class="field">cli_ref_emp</span>}
+</p>
+<p>If so, please specify the employer's company name (as stated in your job contract):
+<br> - Если цель поездки "работа", просьба указать название организации-работодателя (как указано в рабочем договоре): <br>
+<input type="text"> {<span class="field">cli_emp</span>}</p>
+
+<p>Please specify the employer's address: - Просьба указать адрес работодателя:</p>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_emp_addr_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_emp_addr_house</span>}<br></p>
+<p>
+Номер здания/корпуса (optional) <input type="text"> {<span class="field">cli_emp_addr_building</span>}<br>
+Номер квартиры/комнаты (optional) <input type="text"> {<span class="field">cli_emp_addr_room</span>}<br>
+</p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_emp_addr_zip</span>}
+<input type="text"><br>
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_emp_addr_place</span>}
+<input type="text">
+</p>
+
+<p>Email address - Адрес электронной почты {<span class="field">cli_emp_email</span>}
+<input type="text">
+</p>
+
+<p>Phone number - Телефонный номер {<span class="field">cli_emp_phone</span>}<br>
+OR - ИЛИ<br>
+Mobile number - Мобильный номер {<span class="field">cli_emp_mob</span>}<br>
+<input type="text">
+</p>
+<!--  
+<p><input type="radio" name="ref" value="cli_ref_edu"> Educational establishment - Учебное заведение (напр. университет)
+{<span class="field">cli_ref_edu</span>}
+</p>
+<p><small>If so, please specify the address of the educational establishment:
+- Если цель поездки "образование", просьба указать адрес учебного заведения:
+</small></p>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_edu_addr_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_edu_addr_house</span>}<br></p>
+<p>
+Номер здания/корпуса (optional) <input type="text"> {<span class="field">cli_edu_addr_building</span>}<br>
+Номер квартиры/комнаты (optional) <input type="text"> {<span class="field">cli_edu_addr_room</span>}<br>
+</p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_edu_addr_zip</span>}
+<input type="text"><br>
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_edu_addr_place</span>}
+<input type="text">
+</p>
+
+<p>Email address - Адрес электронной почты {<span class="field">cli_edu_email</span>}
+<input type="text">
+</p>
+
+<p>Phone number - Телефонный номер {<span class="field">cli_edu_phone</span>}<br>
+OR - ИЛИ<br>
+Mobile number - Номер мобильного телефона {<span class="field">cli_edu_mob</span>}<br>
+<input type="text">
+</p>
+
+<p><input type="radio" name="ref" value="cli_ref_edu"> Educational establishment
+- Учебное заведение (напр. университет) {<span class="field">cli_ref_edu</span>}
+</p>
+<p><small>If so, please specify the address of the educational establishment:
+- Если цель поездки "образование", просьба указать адрес учебного заведения:
+</small></p>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_edu_addr_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_edu_addr_house</span>}<br></p>
+<p>
+Номер здания/корпуса (optional) <input type="text"> {<span class="field">cli_edu_addr_building</span>}<br>
+Номер квартиры/комнаты (optional) <input type="text"> {<span class="field">cli_edu_addr_room</span>}<br>
+</p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_edu_addr_zip</span>}
+<input type="text"><br>
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_edu_addr_place</span>}
+<input type="text">
+</p>
+
+<p>Email address - Адрес электронной почты {<span class="field">cli_edu_email</span>}
+<input type="text">
+</p>
+
+<p>Phone number - Телефонный номер {<span class="field">cli_edu_phone</span>}<br>
+OR - ИЛИ<br>
+Mobile number - Мобильный номер {<span class="field">cli_edu_mob</span>}<br>
+<input type="text">
+</p>
+
+
+<p><input type="radio" name="ref" value="cli_ref_rel"> Relative(s) - родственник(и)
+{<span class="field">cli_ref_rel</span>}
+</p>
+<small>If so, please specify the address of the relative: - Если референция "родственник",
+просьба указать контактную информацию:
+</small></p>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_rel_addr_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_rel_addr_house</span>}<br></p>
+<p>
+Номер здания/корпуса (optional) <input type="text"> {<span class="field">cli_rel_addr_building</span>}<br>
+Номер квартиры/комнаты (optional) <input type="text"> {<span class="field">cli_rel_addr_room</span>}<br>
+</p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_rel_addr_zip</span>}
+<input type="text"><br>
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_rel_addr_place</span>}
+<input type="text">
+</p>
+
+<p>Email address - Адрес электронной почты {<span class="field">cli_rel_email</span>}
+<input type="text">
+</p>
+
+<p>Phone number - Телефонный номер {<span class="field">cli_rel_phone</span>}<br>
+OR - ИЛИ<br>
+Mobile number - Мобильный номер {<span class="field">cli_rel_mob</span>}<br>
+<input type="text">
+</p>
+
+<p><input type="radio" name="ref" value="cli_ref_other"> Other - Другое  {<span class="field">cli_ref_other</span>}
+</p>
+<p><small>If so, please specify the address: - Если референция "другое", просьба указать контактную информацию:
+</small></p>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_other_addr_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_other_addr_house</span>}<br></p>
+<p>
+Номер здания/корпуса (optional) <input type="text"> {<span class="field">cli_other_addr_building</span>}<br>
+Номер квартиры/комнаты (optional) <input type="text"> {<span class="field">cli_other_addr_room</span>}<br>
+</p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_other_addr_zip</span>}
+<input type="text"><br>
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_other_addr_place</span>}
+<input type="text">
+</p>
+
+<p>Email address - Адрес электронной почты {<span class="field">cli_other_email</span>}
+<input type="text">
+</p>
+
+<p>Phone number - Телефонный номер {<span class="field">cli_other_phone</span>}<br>
+OR - ИЛИ<br>
+Mobile number - Телефонный номер {<span class="field">cli_other_mob</span>}<br>
+<input type="text">
+</p>
+<hr>
+-->
+<h3 id="11">11. Erlernter und... - Trade or profession for which you trained and, if different,
+your current trade or profession - Полученная и (если не совпадает) осуществляемая профессия</h3>
+<p><input type="text"> {<span class="field">cli_prof</span>}
+</p>
+<hr>
+
+<h3 id="12">12.  Beabsichtigte Dauer... - Intended duration of stay in Germany - Предполагаемый срок пребывания в Федеративной Республике Германия</h3>
+<p>
+From - C <input type="text"> {<span class="field">cli_dura_since</span>} to - по <input type="text"> {<span class="field">cli_dura_till</span>}
+</p>
+<hr>
+
+<h3 id="13">13.  Aus welchen Mitteln... - What are your means of subsistence? - Какие имеются средства к существованию?</h3>
+<p><input type="text"> {<span class="field">cli_means</span>}
+</p>
+<p>Besteht Krankenversicherungsschutz... - Do you have health insurance that covers the Federal Republic of Germany? - Обладаете ли Вы медицинской страховкой, действующей в Федеративной Республике Германия?
+<br>
+<input type="radio" name="insurance" value="cli_insurance_travel_yes"> Yes - Да {<span class="field">cli_insurance<mark>_travel</mark>_yes</span>}<br>
+<input type="radio" name="insurance" value="cli_insurance_travel_not"> No - Нет {<span class="field">cli_insurance<mark>_travel</mark>_not</span>}
+</p>
+<hr>
+<!--
+<h3 id="14">14. Sind Sie vorbestraft? - Have you ever been convicted? - Имеете ли Вы судимость?</h3>
+<p>
+<input type="radio" name="crime" value="cli_crime_not"> No - Нет {<span class="field">cli_crime_not</span>}<br>
+<input type="radio" name="crime" value="cli_crime_yes"> Yes - Да {<span class="field">cli_crime_yes</span>}
+</p>
+<h4>If yes... - Если да...</h4>
+<h5> a) in Germany: - в Германии:</h5>
+<p>When? - Когда?<br>
+<small>Month, year - месяц, год</small><br>
+<input type="text"> {<span class="field">cli_crime_when</span>} </p>
+<p>Where? - Где?<br>
+<small>Country - Страна</small><br>
+<input type="text"> {<span class="field">cli_crime_where</span>} </p>
+<p>For what reason? - Причина наказания?<br>
+<input type="text"> {<span class="field">cli_crime_reason</span>}</p>
+<p>Nature and extent of penalty - Мера и размер наказания?<br>
+<input type="text"> {<span class="field">cli_crime_dura</span>} </p>
+
+<h5>b) in other countries: - в другой стране:</h5>
+<p>When? - Когда?<br>
+<small>Month, year - месяц, год</small><br>
+<input type="text"> {<span class="field">cli_crime_when</span>} </p>
+<p>Where? - Где?<br>
+<small>Country - Страна</small><br>
+<input type="text"> {<span class="field">cli_crime_where</span>} </p>
+<p>For what reason? - Причина наказания?<br>
+<input type="text"></p> {<span class="field">cli_crime_reason</span>}</p>
+<p>Nature and extent of penalty - Мера и размер наказания?<br>
+<input type="text"> {<span class="field">cli_crime_dura</span>} </p>
+<hr>
+
+<h3 id="15">15. Sind Sie aus der Bundesrepublik ... - Have you ever been expelled or deported from the Federal Republic of Germany, had an application for a residence permit rejected, or been refused entry into the Federal Republic of Germany? - Были ли Вы раннее высланы за пределы Федеративной Республики Германия или было ли отклонено заявление о выдаче Вам разрешения на пребывание или отказано во въезде в Федеративную Республику Германия?</h3>
+<p>Have you ever been expelled or deported from Germany? <br>- Были ли Вы раннее высланы за пределы ФРГ?<br>
+<input type="radio" name="prev" value="cli_prev_deportet_not"> No - Нет {<span class="field">cli_de_prev_deportet_not</span>}<br>
+<input type="radio" name="prev" value="cli_prev_deportet_yes"> Yes - Да {<span class="field">cli_de_prev_deportet_yes</span>}<br>
+</p>
+<p>Has your application for a residence permit ever been rejected? <br>- Было ли ранее отклонено заявление о выдаче Вам разрешения на пребывание?<br>
+<input type="radio" name="prev" value="cli_prev_rejected_not"> No - Нет {<span class="field">cli_de_prev_rejected_not</span>}<br>
+<input type="radio" name="prev" value="cli_prev_rejected_yes"> Yes - Да {<span class="field">cli_de_prev_rejected_yes</span>}<br>
+</p>
+<p>Has your entry into Germany ever been refused? <br>- Было ли Вам ранее отказано во въезде в ФРГ?<br>
+<input type="radio" name="prev" value="cli_prev_refused_not"> No - Нет {<span class="field">cli_de_prev_refused_not</span>}<br>
+<input type="radio" name="prev" value="cli_prev_refused_yes"> Yes - Да {<span class="field">cli_de_prev_refused_not</span>}<br>
+</p>
+-->
+<!-- Question from AE-Form START 
+<h3>15-A Sind Sie aus einem anderen Schengenstaat* ... - Have you ever been expelled or deported from another Schengen state*, had an application for a residence permit rejected, or been refused entry into another Schengen state? - Были ли Вы раннее высланы за пределы другого государства Шенгенской Зоны* или было ли отклонено заявление о выдаче Вам разрешения на пребывание или отказано во въезде в другое государство Шенгенской Зоны?</h3>
+<p>Have you ever been expelled or deported from another Schengen state? <br>- Были ли Вы раннее высланы за пределы другого государства Шенгенской Зоны?<br>
+<input type="radio" name="prev" value="cli_prev_deportet_not"> No - Нет {<span class="field">cli_schen_prev_deportet_not</span>}<br>
+<input type="radio" name="prev" value="cli_prev_deportet_yes"> Yes - Да {<span class="field">cli_schen_prev_deportet_yes</span>}<br>
+</p>
+<p>Has your application for a residence permit in another Schengen state ever been rejected? <br>from another Schengen state? - Было ли ранее отклонено заявление о выдаче Вам разрешения на пребывание в другом государстве Шенгенской Зоны?<br>
+<input type="radio" name="prev" value="cli_prev_rejected_not"> No - Нет {<span class="field">cli_schen_prev_rejected_not</span>}<br>
+<input type="radio" name="prev" value="cli_prev_rejected_yes"> Yes - Да {<span class="field">cli_schen_prev_rejected_yes</span>}<br>
+</p>
+<p>Has your entry into another Schengen state ever been refused? <br> - Было ли Вам ранее отказано во въезде в другое государство Шенгенской Зоны?<br>
+<input type="radio" name="prev" value="cli_prev_refused_not"> No - Нет {<span class="field">cli_schen_prev_refused_not</span>}<br>
+<input type="radio" name="prev" value="cli_prev_refused_yes"> Yes - Да {<span class="field">cli_schen_prev_refused_not</span>}
+</p>
+<p><small>
+*) Belgien, Frankreich, Griechenland, Italien, Luxemburg, Niederlande, Portugal, Spanien, Österreich, Dänemark, Finnland, Island, Norwegen, Schweden, Estland, Lettland, Litauen, Malta, Polen, Slowakei, Slowenien, Tschechien, Ungarn, Schweiz, Liechtenstein.<br>
+Бельгия, Франция, Греция, Италия, Люксембург, Нидерланды, Португалия, Испания, Австрия, Дания, Финляндия, Исландия, Норвегия, Швеция, Эстония, Латвия, Литва, Мальта, Польша, Словакия, Словения, Чехия, Венгрия, Швейцария, Лихтенштейн.
+</small></p> -->
+<!-- Question from AE-Form END -->
+<hr>
+<!--
+<h3 id="16">16. Leiden Sie an einer... - Do you suffer from any of the following diseases? Есть ли у Вас одна из следующих болезней?</h3>
+<p><small>(please also state if you are suspected of suffering from any of these diseases):
+<br>(просьба указать и в случае подозрения на наличие заболевания):</small></p>
+<p>Smallpox, poliomyelitis, types of influenza not common in humans (e.g. bird flu, swine flu), acute pandemic influenza, severe acute respiratory syndrome (SARS), cholera, pneumonic plague, yellow fever, viral haemorrhagic fever (e.g. Ebola, Lassa, Marburg).
+<br>Оспа, полиомиелит, не распространенные среди людей виды гриппа (например, «птичий грипп», «свиной грипп»), грипп в случае острой пандемии, тяжелый острый респираторный синдром (ТОРС), холера, легочная чума, желтая лихорадка, виды вирусной геморрагической лихорадки (например, Эбола, Ласса, Марбургская геморрагическая лихорадка)
+<br>
+<input type="text">
+</p>
+-->
+<p><button type="submit" class="form-button">SAVE entered data</button>
+Your entries will be saved. You can delete them anytime</p>
+<br>
+<hr>
+
+
+<h2>Data for Accelerated Processing §81a (BFV)</h2>
+
+<p>This form is <u>for employer in Berlin</u> only!</p>
+
+<h3>ANLAGE 1 & ANLAGE 2</h3>
+<h3>Employer's Data - Данные работодателя в Берлине</h3>
+<p><small>NOTE! <a href="http://yarve.com/code.html">Code Terms and Abbreviations are here</a></small></p>
+</div>
+<form method="post" name="form" id="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" <?php echo ($btnAnlage1 || $btnAnlage2)  ? 'hidden' : '' ?>>
+<fieldset>
+<div>
+<input type="hidden" id="id" name="id" value="<?php echo isset($id) ? $id : '' ?>" />
+</div>
+<div>
+<label for="cli_emp">Firmenname (wie im Arbeitsvertrag) - Название компании (соответственно контракту)</label><br>
+<input type="text" id="cli_emp" name="cli_emp" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp) ? $cli_emp : '' ?>" />
+</div>
+<br>
+<div>
+<h5>Geschäftssitz / Sitz der maßgeblichen Betriebsstätte - Адрес регистрации компании или предполагаемого рабочего места:</h5>
+<label for="cli_emp_addr_street">Stra&szlig;e - Street - Улица</label><br>
+<input type="text" id="cli_emp_addr_street" name="cli_emp_addr_street" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_addr_street) ? $cli_emp_addr_street : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_emp_addr_house">Hausnummer - House Nr. -  номер дома (digits, letters, special characters like - / etc.)</label>
+<br>
+<input type="text" id="cli_emp_addr_house" name="cli_emp_addr_house" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_addr_house) ? $cli_emp_addr_house : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_emp_addr_building">Building name or number (digits/letters) - Номер здания/корпуса (optional)</label>
+<br>
+<input type="text" id="cli_emp_addr_building" name="cli_emp_addr_building" req=0 value="<?php echo isset($cli_emp_addr_building) ? $cli_emp_addr_building : '' ?>" />
+</div>
+<br>
+
+
+<div>
+<label for="cli_emp_addr_room">Room number - Номер квартиры/комнаты (optional)</label>
+<br>
+<input type="text" id="cli_emp_addr_room" name="cli_emp_addr_room" req=0 value="<?php echo isset($cli_emp_addr_room) ? $cli_emp_addr_room : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_emp_addr_zip">Postcode - Почтовый Индекс</label>
+<br>
+<input type="text" id="cli_emp_addr_zip" name="cli_emp_addr_zip" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_addr_zip) ? $cli_emp_addr_zip : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_emp_addr_place">Place - Населенный пункт</label>
+<br>
+<input type="text" id="cli_emp_addr_place" name="cli_emp_addr_place" req=1 onblur="checkempty.call(this)" onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_addr_place) ? $cli_emp_addr_place : '' ?>" />
+</div>
+<br>
+
+<br>
+<h5>Vertreter - Company representative - Представитель работодателя </h5>
+
+<div>
+<label for="cli_emp_repr_name_first">Vorname - First name - Имя</label>
+<br>
+<input type="text" id="cli_emp_repr_name_first" name="cli_emp_repr_name_first" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_repr_name_first) ? $cli_emp_repr_name_first : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_emp_repr_name">Name - Last name - Фамилия</label>
+<br>
+<input type="text" id="cli_emp_repr_name" name="cli_emp_repr_name" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_repr_name) ? $cli_emp_repr_name : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_emp_repr_email">Email address - Если мейл представителя неизвестен, укажите стандартный имейл компании</label>
+<br>
+<input type="email" id="cli_emp_repr_email" name="cli_emp_repr_email" placeholder="info@example.com" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_repr_email) ? $cli_emp_repr_email : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_emp_repr_phone">Phone number - Телефонный номер</label>
+<br>
+<input type="tel" id="cli_emp_repr_phone" name="cli_emp_repr_phone" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_repr_phone) ? $cli_emp_repr_phone : '' ?>" />
+<br>
+<br>
+<label for="cli_emp_repr_mob">Mobile number (optional)</label>
+<br>
+<input type="text" id="cli_emp_repr_mob" name="cli_emp_repr_mob" req=0 value="<?php echo isset($cli_emp_repr_mob) ? $cli_emp_repr_mob : '' ?>" />
+</div>
+<br>
+<div style="display: none;">
+<div>
+Place of signature: <strong>Berlin by default</strong> - Пункт местонахождения на момент подписи:
+<br>
+If not Berlin, please enter the place and country - Если не Берлин, укажите город и страну:
+</div>
+
+<div>
+<label for="cli_emp_repr_sign_place">Place - Населенный пункт</label>
+<br>
+<input type="text" id="cli_emp_repr_sign_place" name="cli_emp_repr_sign_place" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_repr_sign_place) ? $cli_emp_repr_sign_place : 'Berlin' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_emp_repr_sign_land">Country - Страна</label>
+<br>
+<input type="text" id="cli_emp_repr_sign_land" name="cli_emp_repr_sign_land" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_repr_sign_land) ? $cli_emp_repr_sign_land : '' ?>" />
+</div>
+<br>
+
+<div>
+Date of signature - Дата подписи - (<strong>по умолчанию СЕГОДНЯ</strong>)
+</div>
+
+<div>
+<label for="cli_emp_repr_sign_date">If other date, please specfy - Если другая дата, укажите здесь: </label>
+<br>
+<input type="date" id="cli_emp_repr_sign_date" name="cli_emp_repr_sign_date" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_emp_repr_sign_date) ? $cli_emp_repr_sign_date : date('Y-m-d') ?>" />
+</div>
+<br>
+</div>
+</fieldset>
+
+<h3>Worker's Data - Данные Работника</h3>
+
+<fieldset>
+<div>
+<label for="cli_name_first">Vorname - First name - Имя</label>
+<br>
+<input type="text" id="cli_name_first" name="cli_name_first" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_name_first) ? $cli_name_first : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_name">Familienname - Surname - Фамилия</label>
+<br>
+<input type="text" id="cli_name" name="cli_name" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_name) ? $cli_name : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_pass_number">Number of passport</label>
+<br>
+<input type="text" id="cli_pass_number" name="cli_pass_number" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_pass_number) ? $cli_pass_number : '' ?>" />
+</div>
+<br>
+
+<h4>Current address - Адрес в настоящее время (согласно прописке)</h4>
+
+<div>
+<label for="cli_addr_native_street">Street - Улица</label>
+<br>
+<input type="text" id="cli_addr_native_street" name="cli_addr_native_street" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_addr_native_street) ? $cli_addr_native_street : '' ?>" />
+<br>
+<label for="cli_addr_native_house">Номер дома</label>
+<br>
+<input type="text" id="cli_addr_native_house" name="cli_addr_native_house" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_addr_native_house) ? $cli_addr_native_house : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_addr_native_building">Номер здания/корпуса (optional)</label>
+<br>
+<input type="text" id="cli_addr_native_building" name="cli_addr_native_building" req=0 value="<?php echo isset($cli_addr_native_building) ? $cli_addr_native_building : '' ?>" />
+<br>
+<label for="cli_addr_native_flat">Номер квартиры</label>
+<br>
+<small>(Необязательно если вы прописаны в частном доме)</small>
+<input type="text" id="cli_addr_native_flat" name="cli_addr_native_flat" req=0 value="<?php echo isset($cli_addr_native_flat) ? $cli_addr_native_flat : '' ?>" />
+<br>
+</div>
+<br>
+
+<div>
+<label for="cli_addr_native_zip">Postcode - Почтовый Индекс</label>
+<br>
+<small>(Если индекс неизвестен, введите ваш адрес в гугл и сразу его узнаете)</small>
+<input type="text" id="cli_addr_native_zip" name="cli_addr_native_zip" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_addr_native_zip) ? $cli_addr_native_zip : '' ?>" />
+<br>
+</div>
+<br>
+
+<div>
+<label for="cli_addr_native_place">Place - Населенный пункт</label>
+<br>
+<input type="text" id="cli_addr_native_place" name="cli_addr_native_place" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_addr_native_place) ? $cli_addr_native_place : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_addr_native_land">Country - Страна</label>
+<br>
+<input type="text" id="cli_addr_native_land" name="cli_addr_native_land" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_addr_native_land) ? $cli_addr_native_land : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_birth_date">Geburtsdatum - Date of birth (YYYY-MM-DD) - Дата рождения</label>
+<br>
+<input type="date" id="cli_birth_date" name="cli_birth_date" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_birth_date) ? $cli_birth_date : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_birth_place">Geburtsort - Place of birth - Город рождения</label>
+<br>
+<input type="text" id="cli_birth_place" name="cli_birth_place" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_birth_place) ? $cli_birth_place : '' ?>" />
+<br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</div>
+<br>
+
+<div>
+<label for="cli_birth_land">Geburtland - Country of birth - Страна рождения</label>
+<br>
+<input type="text" id="cli_birth_land" name="cli_birth_land" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_birth_land) ? $cli_birth_land : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_email">Email address - Адрес электронной почты</label>
+<br>
+<input type="email" id="cli_email" name="cli_email" placeholder="info@example.com" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_email) ? $cli_email : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_phone_native">Phone number - Телефонный номер (optional)</label>
+<br>
+<input type="text" id="cli_phone_native" name="cli_phone_native" placeholder="+91 123456789" req=0 value="<?php echo isset($cli_phone_native) ? $cli_phone_native : '' ?>" /><br>
+</div>
+<br>
+
+<div>
+<label for="cli_mob_native">Mobile phone number - Номер мобильного телефона</label>
+<br>
+<small>(International format please. Example below.)</small>
+<input type="text" id="cli_mob_native" name="cli_mob_native" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_mob_native) ? $cli_mob_native : '' ?>" />
+<br>
+</div>
+<br>
+
+<div>Place and country of signature - город и страна местонахождения на момент подписи:</div>
+
+<div>
+<label for="cli_sign_place">Place - Населенный пункт</label>
+<br>
+<input type="text" id="cli_sign_place" name="cli_sign_place" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_sign_place) ? $cli_sign_place : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_sign_land">Country - Страна</label>
+<br>
+<input type="text" id="cli_sign_land" name="cli_sign_land" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_sign_land) ? $cli_sign_land : '' ?>" />
+</div>
+<br>
+
+<div>
+Date of signature - Дата подписи - <strong>TODAY by default</strong>
+</div>
+<br>
+
+<div>
+<label for="cli_sign_date">If other date, please specfy - Если другая дата, укажите здесь:</label>
+<br>
+<input type="date" id="cli_sign_date" name="cli_sign_date" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_sign_date) ? $cli_sign_date : date('Y-m-d') ?>" />
+</div>
+<br>
+</fieldset>
+
+<div>
+<input type="submit" class="form-button" name="btnSave" value="Save" onclick="return check_fields()"/>
+<br>
+Your entries will be saved. You can delete them anytime - Нажмите SAVE для сохранения данных. Удалить их можно в любой момент.
+</div>
+
+<div>
+<input type="reset" class="form-button" name="btnClear" value="Clear"/>
+<br>
+</div>
+
+<div>
+<input type="submit" class="form-button" formtarget="_blank" name="btnAnlage1" value="Anlage1" onclick="return check_fields()" />
+</div>
+
+<div>
+<input type="submit" class="form-button" formtarget="_blank" name="btnAnlage2" value="Anlage2" onclick="return check_fields()" />
+</div>
+
+<!--<button type="submit" class="form-button">SAVE entered data</button> -->
+</form>
+</div>
+</section>
+</body>
+</html>

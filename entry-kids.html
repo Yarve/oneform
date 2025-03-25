@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entry Page Oneform</title>
+<link rel="stylesheet" href="reset.css" />
+<link rel="stylesheet" href="style-anuar.css" />
+<style>
+   body {
+    background-color: #00BA2D;
+   }
+  </style>
+<!-- <link rel="stylesheet" href="/style-sivers.css">
+<link rel="stylesheet" href="font/arialn.ttf"> -->
+</head>
+<body>
+<header class="container">
+<nav id="navbar" class="header-nav">
+<ul>
+<li><a href="#02">ДО приезда</a></li>
+<li><a href="#03">В ФРГ</a></li>
+<li><a href="#04">Здоровье+страховка</a></li>
+<li><a href="./entry-cli.html">MAIN APPLICANT</a></li>
+<li><a href="./entry-spouse.html">SPOUSE</a></li>
+
+</ul>
+</nav>
+<h1>SPOUSE - Данные о ребенке/детях</h1>
+<p>
+QUICK LINKS: <a href="#kid2">KID #2</a> | <a href="#kid3">KID #3</a> | <a href="#kid4">KID #4</a>
+</p>
+</header>
+
+<p>
+(в том числе о детях старше 18 лет)<br>
+(please also mention kids aged over 18 years)
+</p>
+
+<p><small>
+The information on this page is also required if the persons concerned are remaining abroad.
+<br>
+Необходимо заполнить и в том случае, если это лицо остается за пределами Германии.
+</small></p>
+
+<h3>KID #1 - Первый ребенок</h3>
+
+<p>Ребенок который родился самым <mark>первым</mark>.</p>
+
+<h4 id="01">Общие Данные - Basic Data</h4>
+
+<p>Familienname - Surname - Фамилия {<span class="field">kid_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">kid_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>Geschlecht - Sex - Пол</p>
+<p>
+<input type="radio" name="sex" value="kid_sex_m">
+männlich - male - мужской {<span class="field">kid_sex_m</span>}
+<br>
+<input type="radio" name="sex" value="kid_sex_f">
+weiblich - female - женский {<span class="field">kid_sex_f</span>}
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">kid_birth_date</span>}
+<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">kid_birth_place</span>}
+<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">kid_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Citizenship #2- Гражданство №2 {<span class="field">kid_citz_now#2</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте второе поле пустым)
+</small>
+</p>
+
+<p>Place of residence - Место жительства <br>
+<input type="radio" name="land" value="cli_addr_native">
+Same as applican't - то же, что и у вас (заявителя). {<span class="field">kid_addr</span>} = {<span class="field">cli_addr_native</span>}
+<br>
+<input type="radio" name="land" value="spouse_addr_native"> Other (please speicify) - Другое (просьба указать ниже)
+<br>
+Place - Населенный пункт: <input type="text"> {<span class="field">kid_addr_place</span>}
+<br>
+Country - Страна : <input type="text"> {<span class="field">kid_addr_land</span>}
+</p>
+
+<h4>Has the kid#1 ever been to Germany before? - Ребенок №1: предыдущие визиты ФРГ?</h4>
+<p>
+<input type="radio" name="DE-visited" value="yes">
+ja - yes - да {<span class="field">kid_DE_visited_yes</span>}<br>
+<input type="radio" name="DE-visited" value="not">
+nein - no - нет {<span class="field">kid_DE_visited_not</span>}
+</p>
+
+<p>If so, enter dates and places of your last five stays (DD.MM.YYYY):</p>
+
+<h4>1. visit</h4>
+
+<p>
+from {<span class="field">kid_de_visit_from</span>} <input type="text"><br>
+to {<span class="field">kid_de_visit_to</span>} <input type="text"><br>
+in {<span class="field">kid_de_visit_in</span>} <input type="text">
+</p>
+
+<h4>2. visit</h4>
+
+<p>
+from {<span class="field">kid_de_visit_from#2</span>} <input type="text"><br>
+to {<span class="field">kid_de_visit_to#2</span>} <input type="text"><br>
+in {<span class="field">kid_de_visit_in#2</span>} <input type="text">
+</p>
+
+<h4>3. visit</h4>
+<p>
+from {<span class="field">kid_de_visit_from#3</span>} <input type="text"><br>
+to {<span class="field">kid_de_visit_to#3</span>} <input type="text"><br>
+in {<span class="field">kid_de_visit_in#3</span>} <input type="text">
+</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<h4 id="06">6. Vorgesehener Aufenthaltsort... - Intended place of stay in Germany - Предполагаемое место пребывания в Федеративной Республике Германия</h4>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_addr_intended_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_addr_intended_house</span>}<br></p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_addr_intended_zip</span>}
+<input type="text">
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_addr_intended_place</span>}
+<input type="text">
+</p>
+
+<p><strong>How will you be accommodated?</strong>
+<br>
+<input type="radio" name="accomodation" value="singleroom"> Single room {<span class="field">cli_de_singleroom</span>}<br>
+<input type="radio" name="accomodation" value="rooms"> Apartment with
+<input type="text"> rooms {<span class="field">cli_de_rooms</span>}
+<br>
+<input type="radio" name="accomodation" value="other">  Other (please specify):
+<input type="text"> {<span class="field">cli_de_other</span>}
+</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<hr>
+
+
+<h3>Sollen ... - Do family members intend to accompany you? - Въезжают ли с Вами члены семьи?
+</h3>
+
+<h3>Who from the family accompanies this kid? - Сопровождающие члены семьи?
+  </h3>
+
+  <p>
+      <input type="text" placeholder="Vater / Muter / Geschwister"> {<span class="field">kid_company</span>}
+  </p>
+
+
+
+
+<h3 id="12">12. Beabsichtigte Dauer... - Kid's Intended duration of stay in Germany - Предполагаемый срок пребывания ребенка в ФРГ</h3>
+<p>
+From - C <input type="text"> {<span class="field">kid_dura_since</span>} to - по <input type="text"> {<span class="field">cli_dura_till</span>}
+</p>
+<hr>
+
+<p>Besteht Krankenversicherungsschutz... - Do you have health insurance that covers the Federal Republic of Germany? - Обладаете ли Вы медицинской страховкой, действующей в ФРГ?
+</p>
+<p>
+    <mark>BY DEFAULT:</mark> <span class="field">ДА!</span>
+ </p>
+
+<hr>
+
+
+
+<h3 id="kid2">KID #2 - Второй ребенок</h3>
+
+<p>Familienname - Surname - Фамилия {<span class="field">kid#2_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">kid#2_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>
+<input type="radio" name="sex" value="kid#2_sex_m"> 
+männlich - male - мужской {<span class="field">kid#2_sex_m</span>}<br>
+<input type="radio" name="sex" value="kid#2_sex_f"> 
+weiblich - female - женский {<span class="field">kid#2_sex_f</span>}
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - 
+Дата рождения {<span class="field">kid#2_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">kid#2_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">kid#2_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Citizenship #2- Гражданство №2 {<span class="field">kid#2_citz_now#2</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте второе поле пустым)</small>
+</p>
+
+<p>Place of residence - Место жительства <br>
+<input type="radio" name="land" value="cli_addr_native">
+Same as applican't - то же, что и у вас (заявителя).
+{<span class="field">kid#2_addr</span>} = {<span class="field">cli_addr_native</span>}
+<br>
+<input type="radio" name="land" value="spouse_addr_native"> Other (please speicify) - Другое (просьба указать ниже)
+<br>
+Place - Населенный пункт: <input type="text"> {<span class="field">kid#2_addr_place</span>}
+<br>
+Country - Страна : <input type="text"> {<span class="field">kid#2_addr_land</span>}
+</p>
+
+<h3>Has the kid#2 ever been to Germany before? - Ребенок №2: предыдущие визиты ФРГ?</h3>
+<p>
+<input type="radio" name="DE-visited" value="yes">
+ja - yes - да {<span class="field">kid_DE_visited_yes</span>}<br>
+<input type="radio" name="DE-visited" value="not">
+nein - no - нет {<span class="field">kid_DE_visited_not</span>}
+</p>
+
+<p>If so, enter dates and places of your last five stays (DD.MM.YYYY):</p>
+
+<h4>1. visit</h4>
+
+<p>
+from {<span class="field">kid#2_de_visit_from</span>} <input type="text"><br>
+to {<span class="field">kid#2_de_visit_to</span>} <input type="text"><br>
+in {<span class="field">kid#2_de_visit_in</span>} <input type="text">
+</p>
+
+<h4>2. visit</h4>
+
+<p>
+from {<span class="field">kid#2_de_visit_from#2</span>} <input type="text"><br>
+to {<span class="field">kid#2_de_visit_to#2</span>} <input type="text"><br>
+in {<span class="field">kid#2_de_visit_in#2</span>} <input type="text">
+</p>
+
+<h4>3. visit</h4>
+<p>
+from {<span class="field">kid#2_de_visit_from#3</span>} <input type="text"><br>
+to {<span class="field">kid#2_de_visit_to#3</span>} <input type="text"><br>
+in {<span class="field">kid#2_de_visit_in#3</span>} <input type="text">
+</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<h4 id="06">6. Vorgesehener Aufenthaltsort... - Intended place of stay in Germany - Предполагаемое место пребывания в Федеративной Республике Германия</h4>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_addr_intended_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_addr_intended_house</span>}<br></p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_addr_intended_zip</span>}
+<input type="text">
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_addr_intended_place</span>}
+<input type="text">
+</p>
+
+<p><strong>How will you be accommodated?</strong>
+<br>
+<input type="radio" name="accomodation" value="singleroom"> Single room {<span class="field">cli_de_singleroom</span>}<br>
+<input type="radio" name="accomodation" value="rooms"> Apartment with
+<input type="text"> rooms {<span class="field">cli_de_rooms</span>}
+<br>
+<input type="radio" name="accomodation" value="other">  Other (please specify):
+<input type="text"> {<span class="field">cli_de_other</span>}
+</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<hr>
+
+
+<h3>Sollen ... - Do family members intend to accompany you? - Въезжают ли с Вами члены семьи?
+</h3>
+
+<h3>Who from the family accompanies this kid? - Сопровождающие члены семьи?
+  </h3>
+
+  <p>
+      <input type="text" placeholder="Vater / Muter / Geschwister"> {<span class="field">kid_company</span>}
+  </p>
+
+
+
+
+<h3 id="12">12. Beabsichtigte Dauer... - Kid's Intended duration of stay in Germany - Предполагаемый срок пребывания ребенка в ФРГ</h3>
+<p>
+From - C <input type="text"> {<span class="field">kid#2_dura_since</span>} to - по <input type="text"> {<span class="field">cli_dura_till</span>}
+</p>
+<hr>
+
+<p>Besteht Krankenversicherungsschutz... - Do you have health insurance that covers the Federal Republic of Germany? - Обладаете ли Вы медицинской страховкой, действующей в ФРГ?
+</p>
+<p>
+    <mark>BY DEFAULT:</mark> <span class="field">ДА!</span>
+ </p>
+
+<hr>
+
+
+<h3 id="kid3">KID #3 - Третий ребенок</h3>
+
+<p>Familienname - Surname - Фамилия {<span class="field">kid#3_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">kid#3_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>
+<input type="radio" name="sex" value="kid#3_sex_m"> 
+männlich - male - мужской {<span class="field">kid#3_sex_m</span>}
+<br>
+<input type="radio" name="sex" value="kid#3_sex_f"> 
+weiblich - female - женский {<span class="field">kid#3_sex_f</span>}
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">kid#3_birth_date</span>}
+<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">kid#3_birth_place</span>}
+<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">kid#3_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Citizenship #2- Гражданство №2 {<span class="field">kid#3_citz_now#2</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте второе поле пустым)</small>
+</p>
+
+<p>Place of residence - Место жительства <br>
+<input type="radio" name="land" value="cli_addr_native"> Same as applican't - то же, что и у вас (заявителя).
+{<span class="field">kid#3_addr</span>} = {<span class="field">cli_addr_native</span>}
+  <br>
+<input type="radio" name="land" value="spouse_addr_native"> 
+Other (please speicify) - Другое (просьба указать ниже)
+<br>
+Place - Населенный пункт: <input type="text"> {<span class="field">kid#3_addr_place</span>}
+<br>
+Country - Страна : <input type="text"> {<span class="field">kid#3_addr_land</span>}
+</p>
+
+<h4>Has the kid#3 ever been to Germany before? - Ребенок №3: предыдущие визиты ФРГ?</h4>
+<p>
+<input type="radio" name="DE-visited" value="yes">
+ja - yes - да {<span class="field">kid#3_DE_visited_yes</span>}<br>
+<input type="radio" name="DE-visited" value="not">
+nein - no - нет {<span class="field">kid#3_DE_visited_not</span>}
+</p>
+
+<p>If so, enter dates and places of your last five stays (DD.MM.YYYY):</p>
+
+<h4>1. visit</h4>
+
+<p>
+from {<span class="field">kid#3_de_visit_from</span>} <input type="text"><br>
+to {<span class="field">kid#3_de_visit_to</span>} <input type="text"><br>
+in {<span class="field">kid#3_de_visit_in</span>} <input type="text">
+</p>
+
+<h4>2. visit</h4>
+
+<p>
+from {<span class="field">kid#3_de_visit_from#2</span>} <input type="text"><br>
+to {<span class="field">kid#3_de_visit_to#2</span>} <input type="text"><br>
+in {<span class="field">kid#3_de_visit_in#2</span>} <input type="text">
+</p>
+
+<h4>3. visit</h4>
+<p>
+from {<span class="field">kid#3_de_visit_from#3</span>} <input type="text"><br>
+to {<span class="field">kid#3_de_visit_to#3</span>} <input type="text"><br>
+in {<span class="field">kid#3_de_visit_in#3</span>} <input type="text">
+</p>
+
+<h4 id="06">6. Vorgesehener Aufenthaltsort... - Intended place of stay in Germany - Предполагаемое место пребывания в Федеративной Республике Германия</h4>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_addr_intended_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_addr_intended_house</span>}<br></p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_addr_intended_zip</span>}
+<input type="text">
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_addr_intended_place</span>}
+<input type="text">
+</p>
+
+<p><strong>How will you be accommodated?</strong>
+<br>
+<input type="radio" name="accomodation" value="singleroom"> Single room {<span class="field">cli_de_singleroom</span>}<br>
+<input type="radio" name="accomodation" value="rooms"> Apartment with
+<input type="text"> rooms {<span class="field">cli_de_rooms</span>}
+<br>
+<input type="radio" name="accomodation" value="other">  Other (please specify):
+<input type="text"> {<span class="field">cli_de_other</span>}
+</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<hr>
+
+
+<h3>Sollen ... - Do family members intend to accompany you? - Въезжают ли с Вами члены семьи?
+  </h3>
+  
+  <h3>Who from the family accompanies this kid? - Сопровождающие члены семьи?
+    </h3>
+  
+    <p>
+        <input type="text" placeholder="Vater / Muter / Geschwister"> {<span class="field">kid#3_company</span>}
+    </p>
+  
+  
+  <h3 id="12">12. Beabsichtigte Dauer... - Kid's Intended duration of stay in Germany - Предполагаемый срок пребывания ребенка в ФРГ</h3>
+  <p>
+  From - C <input type="text"> {<span class="field">kid#3_dura_since</span>} 
+  to - по <input type="text"> {<span class="field">kid#3_dura_till</span>}
+  </p>
+  <hr>
+  
+  <h3 id="13">13.  Aus welchen Mitteln... - What are your means of subsistence? - Какие имеются средства к существованию?</h3>
+  <p><input type="text" placeholder="BY DEFAULT: Elterns Gehalt"> {<span class="field">cli_means</span>}
+  </p>
+  
+  <p>Besteht Krankenversicherungsschutz... - Do you have health insurance that covers the Federal Republic of Germany? - Обладаете ли Вы медицинской страховкой, действующей в ФРГ?
+  </p>
+  <p>
+      <mark>RADIO BUTTON BY DEFAULT:</mark> <span class="field">ДА!</span>
+   </p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<hr>
+
+<h3 id="kid4">KID #4 - Четвертый ребенок</h3>
+
+<p>Familienname - Surname - Фамилия {<span class="field">kid#4_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">kid#4_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>
+<input type="radio" name="sex" value="kid#4_sex_m"> 
+männlich - male - мужской {<span class="field">kid#4_sex_m</span>}
+<br>
+<input type="radio" name="sex" value="kid#4_sex_f"> 
+weiblich - female - женский {<span class="field">kid#4_sex_f</span>}
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - 
+  Дата рождения {<span class="field">kid#4_birth_date</span>}
+<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">kid#4_birth_place</span>}
+<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">kid#4_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Citizenship #2- Гражданство №2 {<span class="field">kid#4_citz_now#2</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. 
+Если гражданство одно - оставьте второе поле пустым)</small>
+</p>
+
+<p>Place of residence - Место жительства <br>
+<input type="radio" name="land" value="cli_addr_native"> Same as applican't - то же, что и заявителя.
+{<span class="field">kid#4_addr</span>} = {<span class="field">cli_addr_native</span>}
+  <br>
+<input type="radio" name="land" value="spouse_addr_native"> 
+Other (please speicify) - Другое (просьба указать ниже)
+<br>
+Place - Населенный пункт: <input type="text"> {<span class="field">kid#4_addr_place</span>}
+<br>
+Country - Страна : <input type="text"> {<span class="field">kid#4_addr_land</span>}
+</p>
+
+<h4>Has the kid#4 ever been to Germany before? - Ребенок №4: предыдущие визиты ФРГ?</h4>
+<p>
+<input type="radio" name="DE-visited" value="yes">
+ja - yes - да {<span class="field">kid#4_DE_visited_yes</span>}<br>
+<input type="radio" name="DE-visited" value="not">
+nein - no - нет {<span class="field">kid#4_DE_visited_not</span>}
+</p>
+
+<p>If so, enter dates and places of your last five stays (DD.MM.YYYY):</p>
+
+<h4>1. visit</h4>
+
+<p>
+from {<span class="field">kid#4_de_visit_from</span>} <input type="text"><br>
+to {<span class="field">kid#4_de_visit_to</span>} <input type="text"><br>
+in {<span class="field">kid#4_de_visit_in</span>} <input type="text">
+</p>
+
+<h4>2. visit</h4>
+
+<p>
+from {<span class="field">kid#4_de_visit_from#2</span>} <input type="text"><br>
+to {<span class="field">kid#4_de_visit_to#2</span>} <input type="text"><br>
+in {<span class="field">kid#4_de_visit_in#2</span>} <input type="text">
+</p>
+
+<h4>3. visit</h4>
+<p>
+from {<span class="field">kid#4_de_visit_from#3</span>} <input type="text"><br>
+to {<span class="field">kid#4_de_visit_to#3</span>} <input type="text"><br>
+in {<span class="field">kid#4_de_visit_in#3</span>} <input type="text">
+</p>
+
+h4 id="06">6. Vorgesehener Aufenthaltsort... - Intended place of stay in Germany - Предполагаемое место пребывания в Федеративной Республике Германия</h4>
+
+<p> Street - Улица <input type="text"> {<span class="field">cli_addr_intended_street</span>}<br>
+номер дома <input type="text"> {<span class="field">cli_addr_intended_house</span>}<br></p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">cli_addr_intended_zip</span>}
+<input type="text">
+</p>
+
+<p>Place - Населенный пункт {<span class="field">cli_addr_intended_place</span>}
+<input type="text">
+</p>
+
+<p><strong>How will you be accommodated?</strong>
+<br>
+<input type="radio" name="accomodation" value="singleroom"> Single room {<span class="field">cli_de_singleroom</span>}<br>
+<input type="radio" name="accomodation" value="rooms"> Apartment with
+<input type="text"> rooms {<span class="field">cli_de_rooms</span>}
+<br>
+<input type="radio" name="accomodation" value="other">  Other (please specify):
+<input type="text"> {<span class="field">cli_de_other</span>}
+</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<hr>
+
+<h3>Sollen ... - Do family members intend to accompany you? - Въезжают ли с Вами члены семьи?
+  </h3>
+  
+  <h3>Who from the family accompanies this kid? - Сопровождающие члены семьи?
+    </h3>
+  
+    <p>
+        <input type="text" placeholder="Vater / Muter / Geschwister"> {<span class="field">kid#4_company</span>}
+    </p>
+  
+  
+  <h3 id="12">12. Beabsichtigte Dauer... - Kid's Intended duration of stay in Germany - Предполагаемый срок пребывания ребенка в ФРГ</h3>
+  <p>
+  From - C <input type="text"> {<span class="field">kid#4_dura_since</span>} 
+  to - по <input type="text"> {<span class="field">kid#4_dura_till</span>}
+  </p>
+  <hr>
+  
+  <h3 id="13">13.  Aus welchen Mitteln... - What are your means of subsistence? - Какие имеются средства к существованию?</h3>
+  <p><input type="text" placeholder="BY DEFAULT: Elterns Gehalt"> {<span class="field">cli_means</span>}
+  </p>
+  
+  <p>Besteht Krankenversicherungsschutz... - Do you have health insurance that covers the Federal Republic of Germany? - Обладаете ли Вы медицинской страховкой, действующей в ФРГ?
+  </p>
+  <p>
+      <mark>RADIO BUTTON BY DEFAULT:</mark> <span class="field">ДА!</span>
+   </p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<hr>
+
+<h3 id="03">After arrival in Germany - После прибытия в ФРГ</h3>
+
+<h4>KID #1 in Germany - РЕБЕНОК №1 в ФРГ</h4>
+<p>
+Eingereist am (DD.MM.YYYY) - Date of entry {<span class="field">kid_entry_date</span>}<br>
+<input type="text">
+</p><p>
+Aus - from {<span class="field">kid_entry_land</span>}<br>
+<input type="text">
+</p><p>
+Angemeldet am (DD.MM.YYYY) - Registered on {<span class="field">kid_reg_date</span>}<br>
+<input type="text">
+</p>
+<p>
+Krankenversicherungsnummer - Health Insurance No - № медицинского страхования {<span class="field">kid_insurance<mark>_number</mark></span>}<br>
+<input type="text"> 
+</p>
+<p>
+Rentenversicherungsnummer - Pension Insurance No - № пенсионного (социальное) страхование {<span class="field">kid_insurance<mark>_sva_number</mark></span>}<br>
+<input type="text"> 
+</p>
+
+<p>
+Steuer-ID (IdNr.) - TIN - налоговый идентификационный номер {<span class="field">kid<mark>_idnrv</mark></span>}<br>
+<input type="text"> 
+</p>
+
+<hr>
+
+
+
+
+
+
+
+
+<hr>
+
+</form>
+</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entry Page Oneform</title>
+<link rel="stylesheet" href="reset.css" />
+<link rel="stylesheet" href="style-anuar.css" />
+<style>
+   body {
+    background-color: #ffb7c5;
+   }
+  </style>
+<!-- <link rel="stylesheet" href="/style-sivers.css">
+<link rel="stylesheet" href="font/arialn.ttf"> -->
+</head>
+<body>
+<header class="container">
+<nav id="navbar" class="header-nav">
+<ul>
+<li><a href="#02">ДО приезда</a></li>
+<li><a href="#03">В ФРГ</a></li>
+<li><a href="#04">Здоровье+страховка</a></li>
+<li><a href="./entry-cli.html">MAIN APPLICANT</a></li>
+<li><a href="./entry-kids.html">KIDS</a></li>
+</ul>
+</nav>
+<h1>SPOUSE - Данные супруга(и)</h1>
+</header>
+
+<h2 id="01">Общие Данные - Basic Data</h2>
+
+<p><small>
+<li>The information on this page is also required if the persons concerned are remaining abroad.<br>
+Необходимо заполнить и в том случае, если это лицо остается за пределами Германии.<br>
+<br>
+<li>If you are divorced, you can leave the fields about your former spouse blank.<br>
+Если вы в разводе, можно оставить поля без заполнения.<br>
+<br>
+<li>If you opted for civil union (s. above) please fill the fields. <br>
+Если вы ранее указали, что живете в гражданском браке, поля ниже обязательны к заполнению.
+</small></p>
+
+
+<h3>Данные о себе</h3>
+
+<p>Familienname - Surname - Фамилия {<span class="field">spouse_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Früherer Familienname - Former surname - Прежняя фамилия {<span class="field">spouse_name_prev</span>}<br>
+<input type="text"><br>
+<small>
+Former surname #2 - Прежняя фамилия №2 {<span class="field">spouse_name_prev#2</span>}<br>
+<input type="text"><br>
+(please state ALL former surnames - пожалуйста укажите ВСЕ прежние фамилии. Если прежняя фамилия всего одна или не одной - оставьте эти поля пустыми)
+</small>
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">spouse_name_first</span>}<br>
+<input type="text">
+</p>
+
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">spouse_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">spouse_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Geburtland - Country of birth - Страна рождения {<span class="field">spouse_birth_land</span>}<br>
+<input type="text">
+</p>
+
+<p>Derzeitige Staatsangehörigkeit - Current Citizenship - <u>Нынешнее</u> Гражданство {<span class="field">spouse_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Current Citizenship #2- Гражданство №2 {<span class="field">spouse_citz_now#2</span>}<br>
+<input type="text"><br>
+Citizenship #3- Гражданство №3 {<span class="field">spouse_citz_now#3</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте дополнительные поля пустыми)</small>
+</p>
+
+<p>Frühere Staatsangehörigkeit - Former citzenship - <u>Прежнее</u> гражданство {<span class="field">spouse_citz_prev</span>}<br>
+<input type="text"><br>
+Citizenship #2 - Гражданство №2 {<span class="field">spouse_citz_prev#2</span>}<br>
+<input type="text"><br>
+Citizenship #3 - Гражданство №3 {<span class="field">spouse_citz_prev#3</span>}<br>
+<input type="text"><br>
+<small>(please state all nationalities. If there is no previous citizenship(s), leave the corresponding field(s) blank)
+<br> (пожалуйста укажите ВСЕ гражданства в порядке их получения, аналогично графе выше)</small>
+</p>
+
+<p>Place of residence - Место жительства
+<br>
+<input type="radio" name="land" value="cli_addr_native"> Same as main applicant's - то же, что и у главного заявителя. {<span class="field">spouse_addr_native</span>} = {<span class="field">cli_addr_native</span>}
+<br>
+<input type="radio" name="land" value="spouse_addr_native"> Other (please speicify) - Другое (просьба указать ниже) <input type="text">{<span class="field">spouse_addr_native</span>}
+</p>
+
+<p> Street - Улица <input type="text"> {<span class="field">spouse_addr_native_street</span>}<br>
+номер дома <input type="text"> {<span class="field">spouse_addr_native_house</span>}<br></p>
+<p>
+Номер здания/корпуса (optional) <input type="text"> {<span class="field">spouse_addr_native_building</span>}<br>
+Номер квартиры <input type="text"> {<span class="field">spouse_addr_native_flat</span>}<br>
+<small>(Если вы прописаны в частном доме, это поле необязательно к заполнению)</small>
+</p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">spouse_addr_native_zip</span>}
+<input type="text"><br>
+<small>(Hint: если индекс неизвестен, введите ваш адрес в гугл и сразу его узнаете)</small>
+</p>
+
+<p>Place - Населенный пункт {<span class="field">spouse_addr_native_place</span>}
+<input type="text">
+</p>
+
+<hr>
+
+<h3>Angaben zu Kindern ... - Data of the spouse's children - Данные о детях супруги(а) заявителя</h3>
+<p>
+<mark>Ребенок/дети направляющиеся в Германию</mark> -> <a href="./entry-kids.html">
+  ДАННЫЕ ДЛЯ ЗАПОЛНЕНИЯ ЗДЕСЬ</a>.
+</p><p>
+ВНИМАНИЕ! <br>
+Ниже <mark>заполняются данные о детях от <strong>прежнего брака,
+остающихся на родине</mark>.</strong>
+</p><p>
+(please also mention children aged over 18 years)<br>
+(в том числе о детях старше 18 лет)
+</p>
+
+<h4>Child #1 - Первый ребенок</h4>
+
+<p>Ребенок который родился самым <mark>первым</mark>.</p>
+
+<p>Familienname - Surname - Фамилия {<span class="field">kid_spouse_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">kid_spouse_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>Geschlecht - Sex - Пол</p>
+<p>
+<input type="radio" name="sex" value="kid_spouse_sex_m"> männlich - male - мужской {<span class="field">kid_spouse_sex_m</span>}<br>
+<input type="radio" name="sex" value="kid_spouse_sex_f"> weiblich - female - женский {<span class="field">kid_spouse_sex_f</span>}
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">kid_spouse_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">kid_spouse_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">kid_spouse_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Citizenship #2- Гражданство №2 {<span class="field">kid_spouse_citz_now#2</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте второе поле пустым)</small>
+</p>
+
+<p>Place of residence - Место жительства <br>
+Place - Населенный пункт: <input type="text"> {<span class="field">kid_spouse_addr_place</span>}
+<br>
+Country - Страна : <input type="text"> {<span class="field">kid_spouse_addr_land</span>}
+</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<h4>Child #2 - Второй ребенок</h4>
+
+<p>Familienname - Surname - Фамилия {<span class="field">kid_spouse#2_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">kid_spouse#2_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>
+<input type="radio" name="sex" value="kid_spouse#2_sex_m"> männlich - male - мужской {<span class="field">kid_spouse#2_sex_m</span>}<br>
+<input type="radio" name="sex" value="kid_spouse#2_sex_f"> weiblich - female - женский {<span class="field">kid_spouse#2_sex_f</span>}
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">kid_spouse#2_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">kid_spouse#2_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">kid_spouse#2_citz_now</span>}<br>
+<input type="text"><br>
+<small>
+Citizenship #2- Гражданство №2 {<span class="field">kid_spouse#2_citz_now#2</span>}<br>
+<input type="text"><br>
+(please state all nationalities - пожалуйста укажите ВСЕ гражданства. Есди гражданство одно - оставьте второе поле пустым)</small>
+</p>
+
+<p>Place of residence - Место жительства <br>
+Place - Населенный пункт: <input type="text"> {<span class="field">kid_spouse#2_addr_place</span>}
+<br>
+Country - Страна : <input type="text"> {<span class="field">kid_spouse#2_addr_land</span>}
+</p>
+
+<p><button type="submit" class="form-button">SAVE entered data</button>
+Save your entries to avoid data lost (recommended)</p>
+
+<hr>
+
+<h3 id="04">
+Angaben zu den Eltern... - Information on the spouse’s parents -
+Данные о родителях супруги(а) заявителя
+</h3>
+
+<p><small>
+The information on this page is also required if the persons concerned are remaining abroad.<br>
+Необходимо заполнить и в том случае, если это лицо остается за пределами Германии.
+</small></p>
+
+<p><small>
+If parents have passports or other documents with their first and last names written in the Latin alphabet, strictly copy that spelling.<br>
+Если у родителей есть загранпаспорта или другие документы с написанием их имен и фамилий латиницей, строго скопируйте данное написание.
+</small></p>
+
+
+<h4>Father - Отец</h4>
+
+<p>Familienname - Surname - Фамилия {<span class="field">spouse_dad_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">spouse_dad_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">spouse_dad_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">spouse_dad_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">spouse_dad_citz_now</span>}<br>
+<input type="text"></p>
+
+<p>
+<input type="radio" name="life" value="passed"> Passed away - скончался {<span class="field">spouse_dad_life_passed</span>}<br>
+OR: / ИЛИ:<br>
+Place of residence - Проживает в: <br>
+Place - Населенный пункт: <input type="text"> {<span class="field">spouse_dad_addr_place</span>}<br>
+Country - Страна : <input type="text"> {<span class="field">spouse_dad_addr_land</span>}
+</p>
+
+<h4>Mother - Мать</h4>
+
+<p>Familienname - Surname - Фамилия {<span class="field">spouse_mom_name</span>}<br>
+<input type="text">
+</p>
+
+<p>Vorname - First name - Имя {<span class="field">spouse_mom_name_first</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsdatum - Date of birth (day/month/year) - Дата рождения {<span class="field">spouse_mom_birth_date</span>}<br>
+<input type="text">
+</p>
+
+<p>Geburtsort - Place of birth - Город рождения {<span class="field">spouse_mom_birth_place</span>}<br>
+<input type="text"><br>
+<small>(Если поселок, укажите район и/или область и/или край)</small>
+</p>
+
+<p>Citizenship - Гражданство {<span class="field">spouse_mom_citz_now</span>}<br>
+<input type="text"></p>
+
+<p>
+<input type="radio" name="life" value="passed"> Passed away - скончалась {<span class="field">spouse_mom_life_passed</span>}<br>
+OR: / ИЛИ:<br>
+Place of residence - Проживает в: <br>
+Place of residence - Место жительства <br>
+Place - Населенный пункт: <input type="text"> {<span class="field">spouse_mom_addr_place</span>}<br>
+Country - Страна : <input type="text"> {<span class="field">spouse_mom_addr_land</span>}
+</p>
+
+<hr>
+
+<h4>Have you ever been to Germany before? - Вы бывали раннее в Федеративной Республике Германия?
+</h4>
+<p>
+<input type="radio" name="DE-visited" value="yes">
+ja - yes - да {<span class="field">spouse_DE_visited_yes</span>}
+<br>
+<input type="radio" name="DE-visited" value="not">
+nein - no - нет {<span class="field">spouse_DE_visited_not</span>}
+</p>
+
+<p>If so, enter dates and places of your last five stays (month/year):</p>
+
+<h4>1. visit</h4>
+
+<p>from {<span class="field">spouse_DE_visit_from</span>} <input type="text"><br>
+to {<span class="field">spouse_DE_visit_to</span>} <input type="text"><br>
+in {<span class="field">spouse_DE_visit_in</span>} <input type="text"></p>
+
+<h4>2. visit</h4>
+
+<p>from {<span class="field">spouse_DE_visit_from#2</span>} <input type="text"><br>
+to {<span class="field">spouse_DE_visit_to#2</span>} <input type="text"><br>
+in {<span class="field">spouse_DE_visit_in#2</span>} <input type="text"></p>
+
+<h4>3. visit</h4>
+<p>from {<span class="field">spouse_DE_visit_from#3</span>} <input type="text"><br>
+to {<span class="field">spouse_DE_visit_to#3</span>} <input type="text"><br>
+in {<span class="field">spouse_DE_visit_in#3</span>} <input type="text"></p>
+
+<!-- Question from AE-Form
+<p>Eingereist nach Deutschland am - Date of entry in Germany <br>
+<input type="text"> {<span class="field">spouse_DE-?????????????????????</span>}
+</p>
+<p>Eingereist aus - Arrived from<br>
+<input type="text"> {<span class="field">spouse_DE-?????????????????????</span>}
+</p>
+<p>Angemeldet am:- Registered on: <br>
+<input type="text"> {<span class="field">spouse_DE-?????????????????????</span>}
+</p>
+<p>Jetzige Anschrift: - Current address:<br>
+<input type="text"> {<span class="field">spouse_DE-?????????????????????</span>}
+</p>
+
+Question from AE-Form END -->
+
+<p><button type="submit" class="form-button">SAVE entered data</button>
+Save your entries to avoid data lost (recommended)</p>
+
+<a href="#navbar">Go to NAVBAR</a>
+
+<hr>
+<!-- 
+
+<h3 id="03">Already registered in Germany - Уже проживаете в ФРГ</h3>
+<p>
+Eingereist am (DD.MM.YYYY) - Date of entry {<span class="field">spouse_entry_date</span>}<br>
+<input type="text">
+</p><p>
+Aus - from {<span class="field">spouse_entry_land</span>}<br>
+<input type="text">
+</p><p>
+Angemeldet am (DD.MM.YYYY) - Registered on {<span class="field">spouse_reg_date</span>}<br>
+<input type="text">
+</p><p>
+  -->
+
+</p><p>
+Current address (registration address) in Germany - Адрес вашей регистрации в ФРГ:
+<input type="radio" name="address" value="intended"> same as in section 6 - тот же, что и секции 6.<br>
+<input type="radio" name="address" value="reg"> Other Address:
+</p>
+<p> Street - Улица <input type="text"> {<span class="field">spouse_addr_street</span>}<br>
+номер дома <input type="text"> {<span class="field">spouse_addr_house</span>}<br></p>
+
+<p>Postcode - Почтовый Индекс {<span class="field">spouse_addr_zip</span>}
+<input type="text">
+</p>
+
+<p>Place - Населенный пункт {<span class="field">spouse_addr_place</span>}
+<input type="text">
+</p>
+<hr>
+<h3>Wird ständiger Wohnort... - Do you intend to maintain your permanent residence outside Germany? - Сохраняется ли постоянное место жительства за пределами Федеративной Республики Германия?
+</h3>
+<p>Recommendation: opt for "yes", because it will be easier for you to get back your tax if you send money to the relatives in your native country.
+</p>
+<p><small> You can always change your decision while staying in Germany</small></p>
+<p>
+<input type="radio" name="addr_native" value="yes">
+Yes, it will be the current address of my registration {<span class="field">spouse_addr_native_yes</span>}
+<br>
+<input type="radio" name="addr_native" value="not">
+No {<span class="field">spouse_addr_native_not</span>}
+</p>
+
+<hr>
+
+<h3>Sollen ... - Do family members intend to accompany the spouse? - Въезжают ли с cупругой(м) члены семьи?
+</h3>
+
+<p>
+"Family" is to be understood as a spouse and minor child(ren) <br>
+Понятие "семья" здесь подразумевает обоих супругов и детей до 18 лет
+</p>
+
+<p>
+<input type="radio" name="reunion" value="spouse_reunion_yes">
+Yes. {<span class="field">spouse_reunion_yes</span>}
+<br>
+<input type="radio" name="reunion" value="spouse_reunion_not">
+No. {<span class="field">spouse_reunion_not</span>}
+</p>
+
+<p> If yes, who - Если да, кто именно: </p>
+
+<p><small>Multiple choice possible / Выберите всех кто едет с вами</small></p>
+
+<input type="radio" name="reunion" value="spouse_reunion_spouse"> Spouse - Супруг(а) {<span class="field">spouse_reunion_spouse</span>}<br>
+<input type="radio" name="reunion" value="spouse_reunion_kid"> Oldest child - Первый ребенок {<span class="field">spouse_reunion_kid</span>}<br>
+<input type="radio" name="reunion" value="spouse_reunion_kid#2"> Second child - Второй ребенок {<span class="field">spouse_reunion_kid#2</span>}<br>
+<input type="radio" name="reunion" value="spouse_reunion_kid#3"> Third child - Третий ребенок {<span class="field">spouse_reunion_kid#3</span>}<br>
+
+<p><button type="submit" class="form-button">SAVE entered data</button>
+Save your entries to avoid data lost (recommended)</p>
+
+<hr>
+
+<h3 id="12">12.  Beabsichtigte Dauer... - Intended duration of stay in Germany - Предполагаемый срок пребывания в Федеративной Республике Германия</h3>
+<p>
+From - C <input type="text"> {<span class="field">cli_dura_since</span>} to - по <input type="text"> {<span class="field">cli_dura_till</span>}
+</p>
+<hr>
+
+<h3 id="13">13.  Aus welchen Mitteln... - What are your means of subsistence? - Какие имеются средства к существованию?</h3>
+<p><input type="text"> {<span class="field">cli_means</span>}
+</p>
+<p>Besteht Krankenversicherungsschutz... - Do you have health insurance that covers the Federal Republic of Germany? - Обладаете ли Вы медицинской страховкой, действующей в Федеративной Республике Германия?
+<br>
+<input type="radio" name="insurance" value="cli_insurance_yes"> Yes - Да {<span class="field">cli_insurance_yes</span>}<br>
+<input type="radio" name="insurance" value="cli_insurance_not"> No - Нет {<span class="field">cli_insurance_not</span>}
+</p>
+<hr>
+<br>
+
+<div>Place and country of signature - город и страна местонахождения на момент подписи:</div>
+
+<div>
+<label for="cli_sign_place">Place - Населенный пункт</label>
+<br>
+<input type="text" id="cli_sign_place" name="cli_sign_place" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_sign_place) ? $cli_sign_place : '' ?>" />
+</div>
+<br>
+
+<div>
+<label for="cli_sign_land">Country - Страна</label>
+<br>
+<input type="text" id="cli_sign_land" name="cli_sign_land" req=1 onblur="checkempty.call(this)" value="<?php echo isset($cli_sign_land) ? $cli_sign_land : '' ?>" />
+</div>
+<br>
+
+</div>
+</section>
+</body>
+</html>
